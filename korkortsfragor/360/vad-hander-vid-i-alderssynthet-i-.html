@@ -29,6 +29,15 @@
       ga('send', 'pageview');
 
     </script>
+
+    <script>
+      var trackOutboundLink = function(url) {
+      ga('send', 'event', 'outbound', 'click', url, {
+      'transport': 'beacon',
+      'hitCallback': function(){document.location = url;}
+      });
+      }
+    </script>
   </head>
 
   <body>
@@ -105,16 +114,25 @@
 
     <div class="container sell-row">
       <div class="row">
-	<div class="col-md-6">
+	<div class="col-md-6 col-md-push-6">
+	  <h4>Öva inför teoriprovet med vår app</h4>
+	  <p>Vår app innehåller 400 körkortsfrågor med förklaringar och fördjupningar. Klara teoriprovet utan att läsa tunga böcker!</p>
+	  <span class="store-badge">
+	    <a href="https://itunes.apple.com/se/app/korkort-gratis/id1132852164?l=en&amp;mt=8" onclick="trackOutboundLink('https://itunes.apple.com/se/app/korkort-gratis/id1132852164?l=en&amp;mt=8'); return false;">
+	      <img src="../../images/store-badge.png">
+	    </a>
+	  </span>
+	  <span class="play-badge">
+	    <a href="https://play.google.com/store/apps/details?id=se.dset.android.korkort" onclick="trackOutboundLink('https://play.google.com/store/apps/details?id=se.dset.android.korkort'); return false;">
+	      <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png" />
+	    </a>
+	  </span>
+	</div>
+
+	<div class="col-md-6 col-md-pull-6">
 	  <h4>Öva inför teoriprovet med vårt webbtest</h4>
 	  <p>Du kan öva inför teoriprovet med vårt webbtest. Webbtestet innehåller 70 körkortsfrågor som testar dina kunskaper inför teoriprovet. Det är helt gratis och du behöver inte registrera dig.</p>
 	  <a class="btn btn-primary btn-lg" href="../../">Gör webbtestet!</a>
-	</div>
-
-	<div class="col-md-6">
-	  <h4>Öva inför teoriprovet med vår app</h4>
-	  <p>Vår app innehåller över 400 körkortsfrågor med förklaringar och fördjupningar och över 500 teorikort med det viktigaste från teoriboken. Med vår app kan du klara teoriprovet utan att behöva läsa tunga böcker! Vår app är Sveriges mest prisvärda övningsmaterial inför teoriprovet.</p>
-	  <p class="play-badge"><a href="https://play.google.com/store/apps/details?id=se.dset.android.korkort&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png" /></a></p>
 	</div>
       </div>
     </div>
